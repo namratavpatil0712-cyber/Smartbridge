@@ -71,3 +71,141 @@ Use this structure as the basis for organizing the project files.
 *File created and maintained by Neeraj Jadhav.*
 
 
+## Project Overview
+This project predicts hypertension stages using machine learning models.
+
+The dataset includes patient health information such as:
+- Gender
+- Age
+- Medical History
+- Medication Status
+- Systolic Pressure
+- Diastolic Pressure
+- Symptoms
+
+The goal is to analyze patient data and build machine learning models to predict hypertension stages.
+
+---
+
+## Dataset Features
+
+Gender  
+Age  
+History  
+Patient  
+TakeMedication  
+Severity  
+BreathShortness  
+VisualChanges  
+NoseBleeding  
+Whendiagnoused  
+Systolic  
+Diastolic  
+ControlledDiet  
+Stages (Target)
+
+---
+
+## Data Preprocessing
+
+### Label Encoding
+
+Gender: Male = 0 , Female = 1  
+Binary Features: No = 0 , Yes = 1  
+
+Age Groups:
+18-34 = 1  
+35-50 = 2  
+51-64 = 3  
+65+ = 4  
+
+Severity:
+Mild = 0  
+Moderate = 1  
+Severe = 2  
+
+Target Stages:
+Normal = 0  
+Stage-1 = 1  
+Stage-2 = 2  
+Crisis = 3  
+
+---
+
+## Feature Scaling
+
+MinMaxScaler was applied to ordinal features to improve model performance.
+
+---
+
+## Exploratory Data Analysis
+
+### Gender Distribution
+The dataset contains an almost equal number of male and female patients.
+
+### Hypertension Stage Distribution
+Stage-1 hypertension is the most common stage in the dataset.
+
+### Correlation Analysis
+A strong positive correlation exists between systolic and diastolic pressure.
+
+### Medication vs Severity
+Patients taking medication are mostly in higher severity stages.
+
+### Age vs Hypertension Stage
+Older age groups show higher hypertension stages.
+
+---
+
+## Data Splitting
+
+Training Set: 1460 samples (80%)
+
+Testing Set: 365 samples (20%)
+
+Stratified sampling ensures balanced class representation.
+
+---
+
+## Machine Learning Models Used
+
+Logistic Regression
+
+Decision Tree
+
+Random Forest
+
+Support Vector Machine (SVM)
+
+K-Nearest Neighbors (KNN)
+
+Ridge Classifier
+
+Gaussian Naive Bayes
+
+---
+
+## Model Accuracy Comparison
+
+Logistic Regression : 96.99%
+
+Decision Tree : 99.73%
+
+Random Forest : 100.0%
+
+SVM : 99.73%
+
+KNN : 97.26%
+
+Ridge Classifier : 95.07%
+
+Gaussian Naive Bayes : 88.49%
+
+---
+
+## Confusion Matrix
+
+Confusion Matrix was generated using the Random Forest model to evaluate classification performance.
+
+
+## Created by Namrata Patil
