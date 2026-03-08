@@ -209,3 +209,162 @@ Confusion Matrix was generated using the Random Forest model to evaluate classif
 
 
 ## Created by Namrata Patil
+---
+
+# Comprehensive Model Comparison
+
+## Overfitting Analysis and Model Selection Rationale
+
+### Why Logistic Regression Was Selected
+
+Although some machine learning models achieved perfect accuracy, careful analysis was required to ensure the model would generalize well to real-world medical data.
+
+### Critical Analysis of High-Performing Models
+
+#### Perfect Accuracy Models (100%) - Overfitting Indicators
+
+The following models achieved **100% test accuracy**:
+
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+
+While perfect accuracy may appear ideal, it is often a **sign of overfitting**, especially in healthcare datasets.
+
+These models may have memorized patterns from the training data rather than learning generalizable relationships.
+
+### Overfitting Consequences
+
+- Poor performance on unseen patient data
+- Lack of adaptability to real-world clinical variations
+- Risk of incorrect clinical decisions
+- Reduced reliability in medical environments
+
+### Key Performance Indicators
+
+| Metric | Value |
+|------|------|
+| Overall Accuracy | 95.2% |
+| Macro Average F1 Score | 0.95 |
+| Weighted Average F1 Score | 0.95 |
+| Crisis Recall | 100% |
+| Stage-2 Precision | 100% |
+
+Based on these factors, **Logistic Regression** was selected as the final model due to its balance of **accuracy, stability, and generalization capability**.
+
+---
+
+# Model Persistence
+
+To deploy the trained model effectively, **model serialization** was implemented.
+
+### Benefits of Model Serialization
+
+- Persistent storage of trained parameters
+- Easy model reuse without retraining
+- Version control for model updates
+- Deployment-ready format
+- Cross-platform compatibility
+
+The trained machine learning model was saved using **Python serialization techniques** such as `pickle` or `joblib`.
+
+This allows the model to be loaded directly into the web application for real-time predictions.
+
+---
+
+# Flask Web Application Development
+
+To make the machine learning model accessible to users, a **Flask-based web application** was developed.
+
+## Application Architecture
+
+The application consists of two main components:
+
+### Backend Implementation
+
+- Developed using **Flask (Python Framework)**
+- Handles model loading and prediction logic
+- Processes patient input data
+- Generates hypertension stage predictions
+
+File: `app.py`
+
+### Frontend Implementation
+
+The user interface was designed using **HTML, CSS, and Bootstrap** to create a professional medical interface.
+
+File: `index.html`
+
+---
+
+## Professional Medical Interface
+
+The web application includes the following features:
+
+- Medical-grade professional interface
+- Responsive design for desktop and mobile devices
+- Real-time form validation
+- Color-coded risk assessment results
+- Clinical recommendations for patient care
+- Accessibility-focused healthcare interface
+
+---
+
+# Application Workflow
+
+## 1. Home Page Interface
+
+Features:
+
+- Clean and professional healthcare design
+- Patient assessment form
+- Secure and validated input fields
+
+---
+
+## 2. Patient Data Input Form
+
+The form collects the following information:
+
+### Demographics
+- Gender
+- Age Group
+
+### Medical History
+- Family history
+- Current medication status
+
+### Symptoms Assessment
+- Breath shortness
+- Visual changes
+- Nose bleeding
+
+### Blood Pressure Readings
+- Systolic values
+- Diastolic values
+
+### Lifestyle Factors
+- Diet control
+- Medication adherence
+
+---
+
+## 3. Risk Assessment Results
+
+After submitting the form, the system provides:
+
+- Hypertension stage classification
+- Prediction confidence percentage
+- Clinical recommendations
+- Actionable medical guidance
+- Color-coded risk levels
+
+---
+
+# Model Deployment
+
+The trained machine learning model is integrated into the Flask web application, enabling **real-time hypertension risk prediction** based on patient input data.
+
+This deployment allows healthcare professionals and users to easily interact with the prediction system through a simple web interface.
+
+---
